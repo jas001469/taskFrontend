@@ -7,7 +7,7 @@ const AdminDashboard = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/submissions")
+    axios.get("https://taskbackend-55fk.onrender.com/api/submissions")
       .then(response => {
         setSubmissions(response.data);
       })
@@ -34,7 +34,7 @@ const AdminDashboard = () => {
               <td>{user.socialMedia}</td>
               <td>
                 {user.images.map((img, i) => (
-                  <img key={i} src={`http://localhost:5000/uploads/${img}`} alt="User Upload" width="100" />
+                  <img key={i} src={`https://taskbackend-55fk.onrender.com/uploads/${img}`} alt="User Upload" width="100" />
                 ))}
               </td>
             </tr>
